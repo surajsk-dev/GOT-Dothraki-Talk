@@ -1,7 +1,13 @@
 @font-face {
     font-family: 'Game of Thrones';
-    local('Game of Thrones') src: url('/fonts/Game of Thrones.ttf');
+    local('Game of Thrones') 
+    src: url('/fonts/Game of Thrones.ttf');
     format('truetype');
+    src: url('GameofThrones.woff2') format('woff2'),
+        url('GameofThrones.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 :root {
