@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Game of Thrones';
+    local('Game of Thrones') src: url('/fonts/Game of Thrones.ttf');
+    format('truetype');
+}
+
+:root {
+    --bg-color: #02111d;
+    --txt: #DAA520;
+}
+
+body {
+    font-family: 'Game of Thrones';
+    margin: 0px;
+}
+
+#header-text {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    color: var(--txt);
+}
+
+#main-bg {
+    background-image: url(/images/dothraki-bg-img.png);
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+
+}
+
+#txt-input {
+    width: 60%;
+    height: 12vh;
+    margin: auto;
+    display: block;
+}
+
+#btn {
+    padding: 0.5rem 1.5rem;
+    margin: auto;
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--txt);
+    border: 0px;
+    border-radius: 5px;
+    font-family:'Game of Thrones' ;
+    font-weight:bold;
+    color:var(--bg-color);
+    
+}
+
+#trans-head{
+    text-align: center;
+    color: var(--txt);
+    font-weight: bolder;
+    padding: 1rem;
+}
+
+#output-txt{
+    border:1px solid var(--txt);
+    width: 60%;
+    height: 12vh;
+    margin: auto;
+    display: block;
+    background-color:white;
+    padding: 0.5rem 0.5rem;
+}
+
+#footer{
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    color: var(--txt);
+}
+
+#foot-heading{
+    font-size: large;
+    font-weight: bold;
+}

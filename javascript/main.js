@@ -8,7 +8,7 @@ var txtInput = document.querySelector("#txt-input");
 var outputTxt = document.querySelector("#output-txt");
 
 //url
-var url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+var url = "https://api.funtranslations.com/translate/dothraki.json"
 
 function getText(text) {
     return url + "?" +"text=" + text
