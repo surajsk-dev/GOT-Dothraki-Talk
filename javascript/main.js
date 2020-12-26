@@ -14,13 +14,18 @@ function getText(text) {
     return url + "?" +"text=" + text
 }
 
+//error handing function
+function errorHandler(error){
+    alert("something wrong with server! Please try after sometime. "+error)
+}
+
 //function for click
 function clickEventHandler() {
 
     //reading input value
     var inputText = txtInput.value;
     //fetching from server
-    fetch(getText(inputText)).then(Response => Response.json()).then(json => outputTxt.innerText = json.contents.translated)
+    fetch(getText(inputText)).then(Response => Response.json()).then(json => outputTxt.innerText = json.contents.translated).catch(errorHandler)
 
 
 }
