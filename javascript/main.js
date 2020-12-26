@@ -1,19 +1,29 @@
 //button reference
-var btn=document.querySelector("#btn");
+var btn = document.querySelector("#btn");
 
 //text area reference input
-var txtInput=document.querySelector("#txt-input");
+var txtInput = document.querySelector("#txt-input");
 
 //div  area reference output
-var outputTxt=document.querySelector("#output-txt");
+var outputTxt = document.querySelector("#output-txt");
 
-//button clicking event
-btn.addEventListener("click",clickEventHandler);
+//url
+var url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+
+function getText(text) {
+    return url + "?" +"text=" + text
+}
 
 //function for click
-function clickEventHandler(){
-    console.log("clicked");
-    console.log("this is your text "+txtInput.value);
-    outputTxt.innerText="jnsjj "+txtInput.value
-    
+function clickEventHandler() {
+
+    //reading input value
+    var inputText = txtInput.value;
+    //fetching from server
+    fetch(getText(inputText)).then(Response => Response.json()).then(json => outputTxt.innerText = json.contents.translated)
+
+
 }
+
+//button clicking event
+btn.addEventListener("click", clickEventHandler);
